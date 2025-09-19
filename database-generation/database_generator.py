@@ -4,6 +4,7 @@ import csv
 import os
 import sys
 
+csv.field_size_limit(sys.maxsize)
 # Load MiniLM model and tokenizer
 model='microsoft/MiniLM-L12-H384-uncased'
 model=sys.argv[1]
