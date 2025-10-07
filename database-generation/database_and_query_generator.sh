@@ -21,20 +21,22 @@ done
 wait
 
 # Step 4: Create hash-based indexes
-./hash_table_based_index_generator ../data_csv_files/text_csv_files/text.csv old_id_index.bin 0
-./hash_table_based_index_generator ../data_csv_files/page_csv_files/page.csv page_id_index.bin 0
-./hash_table_based_index_generator ../data_csv_files/revision_csv_files/revision_clean.csv rev_id_index.bin 0
-./hash_table_based_index_generator ../data_csv_files/revision_csv_files/revision_clean.csv rev_page_index.bin 1
+./hash_table_based_index_generator ../data_csv_files/text_csv_files/text.csv old_id_index.bin 0 &
+./hash_table_based_index_generator ../data_csv_files/page_csv_files/page.csv page_id_index.bin 0 &
+./hash_table_based_index_generator ../data_csv_files/revision_csv_files/revision_clean.csv rev_id_index.bin 0 &
+./hash_table_based_index_generator ../data_csv_files/revision_csv_files/revision_clean.csv rev_page_index.bin 1 &
+
+wait 
 
 cd ../offsets_files
 # Step 5: Calculate offsets
-./offsets_calculation ../data_csv_files/page_csv_files/page_extra.csv page_extra_offsets.bin
-./offsets_calculation ../data_csv_files/page_csv_files/page.csv page_offsets.bin
-./offsets_calculation ../data_csv_files/revision_csv_files/revision_clean.csv revision_offsets.bin
-./offsets_calculation ../data_csv_files/text_csv_files/text.csv text_offsets.bin
-./offsets_calculation ../data_csv_files/text_csv_files/embedding.csv text_embedding_offsets.bin
+./offsets_calculation ../data_csv_files/page_csv_files/page_extra.csv page_extra_offsets.bin &
+./offsets_calculation ../data_csv_files/page_csv_files/page.csv page_offsets.bin &
+./offsets_calculation ../data_csv_files/revision_csv_files/revision_clean.csv revision_offsets.bin &
+./offsets_calculation ../data_csv_files/text_csv_files/text.csv text_offsets.bin &
+./offsets_calculation ../data_csv_files/text_csv_files/embedding.csv text_embedding_offsets.bin &
 
 cd ..
 # Step 6: Create binary embeddings
-./binary_embeddings_creator page
-./binary_embeddings_creator text
+./binary_embeddings_creator page &
+./binary_embeddings_creator text &
