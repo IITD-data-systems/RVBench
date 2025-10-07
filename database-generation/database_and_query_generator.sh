@@ -14,8 +14,8 @@ cd index_files
 # Step 3: Create indexes for IVF and HNSW for page and text
 for t in page text; do
   for m in l2 cos; do
-    ./ivfflat_index_generator $t $m
-    ./hnsw_index_generator $t $m
+    ./ivfflat_index_generator "$t" "$m" &
+    ./hnsw_index_generator "$t" "$m" &
   done
 done
 
