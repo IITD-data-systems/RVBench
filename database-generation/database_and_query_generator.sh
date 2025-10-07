@@ -18,7 +18,7 @@ for t in page text; do
     ./hnsw_index_generator "$t" "$m" &
   done
 done
-
+wait
 
 # Step 4: Create hash-based indexes
 ./hash_table_based_index_generator ../data_csv_files/text_csv_files/text.csv old_id_index.bin 0
