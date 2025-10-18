@@ -1,6 +1,6 @@
-# HyBench
+# RVBench
 
-**HyBench** is a benchmark framework for evaluating **hybrid queries** in vector databases using a MediaWiki-based dataset. It integrates structured and vector data to assess performance on real-world hybrid workloads.
+**RVBench** is a benchmark framework for evaluating **hybrid queries** in vector databases using a MediaWiki-based dataset. It integrates structured and vector data to assess performance on real-world hybrid workloads.
 
 ## Requirements
 
