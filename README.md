@@ -116,6 +116,7 @@ Contains experimental results and analysis tools.
   - `baseline_queries_output/` - Baseline implementation results
   - `pgvector_query_plans/` - PostgreSQL pgvector execution plans
   - `postgres_queries_output/` - PostgreSQL pgvector query results
+  - `experiments` - contain the plots for original experiments (l2 and cosine metrics) along with commercial databases experiments for A1 inside sub-directory named commercial-databases-experiments
 
 - **Analysis tools**:
   - `ground_truth_result_computer.py` - Python script for running queries using pgvector with psycopg2 to compute ground truth results
