@@ -108,8 +108,8 @@ def connect(i):
     connection = psycopg2.connect(
             host="localhost",
             database="mediawiki_db",
-            user="ayushsingh",
-            password="ayush"
+            user="user",
+            password="password"
         )
 
     cursor = connection.cursor()
