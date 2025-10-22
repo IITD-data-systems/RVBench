@@ -116,13 +116,13 @@ Contains experimental results and analysis tools.
   - `baseline_queries_output/` - Baseline implementation results
   - `pgvector_query_plans/` - PostgreSQL pgvector execution plans
   - `postgres_queries_output/` - PostgreSQL pgvector query results
-  - `experiments` - contain the plots for original experiments (l2 and cosine metrics) along with commercial databases experiments for A1 inside sub-directory named commercial_databases_experiments
+  - `experiments/` - contain the plots for original experiments (l2 and cosine metrics) along with commercial databases experiments for A1 inside sub-directory named commercial_databases_experiments
 
 - **Analysis tools**:
   - `ground_truth_result_computer.py` - Python script for running queries using pgvector with psycopg2 to compute ground truth results
   - `accuracy_baseline.sh` - Accuracy calculation script for baseline implementation
 
--**Raw results files**:
+- **Raw results files**:
   - `raw_results.xlsx` - Raw experimental results for original setting with color-coded performance comparisons
   - `A1_vs_baseline_common.xlsx` - Raw experimental results for A1 and baseline on common setting
   - `postgres_vs_baseline_common.xlsx` - Raw experimental results for postgres/pgvector and baseline on common setting
