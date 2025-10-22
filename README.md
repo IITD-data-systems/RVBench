@@ -15,7 +15,7 @@
 The repository is organized into five main directories:
 
 ```
-HyBench/
+RVBench/
 ├── baseline-implementation/
 ├── database-generation/
 ├── output-files/
@@ -67,10 +67,10 @@ To sample the dataset of smaller size from original mediawiki dataset:
 
 ```bash
 cd database-generation
-python3 sampling.py <row_numbers_in_page_table>
+python3 sampling.py <rows_in_page_table>
 ```
 
-Where the user need to give number of rows needed in the final dataset inside the page table, and the new dataset will be created from the original one having that number of rows in page table. Note:- Number of rows must be less than what it is in original page.csv file.
+Where the user need to give number of rows needed in the final dataset inside the page table as command line argument, and the new dataset will be created from the original one having that number of rows in page table. Note:- Number of rows must be less than what it is in original page.csv file.
 
 ### 2. baseline-implementation/
 
