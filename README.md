@@ -122,7 +122,8 @@ Contains experimental results and analysis tools.
   - `accuracy_baseline.sh` - Accuracy calculation script for baseline implementation
 -Raw results files:-
   - `raw_results.xlsx` - Raw experimental results for original setting with color-coded performance comparisons
-  - `A1_vs_baseline.xlsx` - Raw experimental results for A1 and baseline on common setting
+  - `A1_vs_baseline_common.xlsx` - Raw experimental results for A1 and baseline on common setting
+  - `postgres_vs_baseline_common.xlsx` - Raw experimental results for postgres/pgvector and baseline on common setting
 
 **Note on Ground Truth**: Ground truth is calculated using PostgreSQL with pgvector. The current directories already contain ground truth results for the default experimental setup. However, if you use a different embedding model, you will need to recalculate the ground truth using `ground_truth_result_computer.py`, which requires PostgreSQL and pgvector to be installed and configured on your system. The existing results are provided for the experimented dataset and default embedding model.
 
