@@ -61,17 +61,16 @@ This script will:
 - **Embedding Models**: Check `models_supported.txt` for available models. Modify the first command in `database_and_query_generator.sh` to use a different model (instructions provided in comments inside the sh file)
 - **System Configuration**: Update FAISS library paths in compile commands according to your system setup (further instructions in sh file)
 
-## Dataset Scaling
+## Sampling 
 
-To scale the dataset to larger sizes (up to 200× the initial 10M data size):
+To sample the dataset of smaller size from original mediawiki dataset:
 
 ```bash
 cd database-generation
-g++ scale_database.cpp -o scale_database -O3 -std=c++17
-./scale_database <scale_factor>
+python3 sampling.py <row_numbers_in_page_table>
 ```
 
-Where scale_factor is a number up to 200 for the initial data size of 10M. This uses a simple duplication method to create larger datasets.
+Where the user need to give number of rows needed in the final dataset inside the page table, and the new dataset will be created from the original one having that number of rows in page table. Note:- Number of rows must be less than what it is in original page.csv file.
 
 ### 2. baseline-implementation/
 
