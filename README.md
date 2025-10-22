@@ -120,7 +120,9 @@ Contains experimental results and analysis tools.
 - **Analysis tools**:
   - `ground_truth_result_computer.py` - Python script for running queries using pgvector with psycopg2 to compute ground truth results
   - `accuracy_baseline.sh` - Accuracy calculation script for baseline implementation
-  - `raw_results.xlsx` - Raw experimental results with color-coded performance comparisons
+-Raw results files:-
+  - `raw_results.xlsx` - Raw experimental results for original setting with color-coded performance comparisons
+  - `A1_vs_baseline.xlsx` - Raw experimental results for A1 and baseline on common setting
 
 **Note on Ground Truth**: Ground truth is calculated using PostgreSQL with pgvector. The current directories already contain ground truth results for the default experimental setup. However, if you use a different embedding model, you will need to recalculate the ground truth using `ground_truth_result_computer.py`, which requires PostgreSQL and pgvector to be installed and configured on your system. The existing results are provided for the experimented dataset and default embedding model.
 
@@ -135,9 +137,9 @@ This script calculates accuracy results for all combinations of metrics and inde
 
 #### Result Interpretation:
 The Excel sheet uses color coding:
-- 🔴 **Red**: pgvector outperforms baseline
+- 🔴 **Red**: pgvector/A1/postgres outperforms baseline
 - 🔵 **Blue**: Similar performance
-- 🟢 **Green**: Baseline outperforms pgvector
+- 🟢 **Green**: Baseline outperforms pgvector/A1/postgres
 
 ## Getting Started
 
