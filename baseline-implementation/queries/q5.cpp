@@ -140,6 +140,10 @@ void fullPipelineNewVersion(const string& queryFilename,
         while(true){
             auto indices =index.KNNWithIndicesOnly(query_data,k_temp);
             for (auto rowId : indices) {
+                if(rowId==-1){
+                    done=true;
+                    break;
+                }
                 if (index_to_rev_id.find(rowId)!=index_to_rev_id.end())continue;
 
                 auto row = getRowByIndex(csvFile, csvOffsetFile, rowId);
