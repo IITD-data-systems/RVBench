@@ -38,7 +38,7 @@ void saveVectorOfVectors(const vector<vector<float>>& data, const string& filena
 }
 
 void read_embeddings(const string& table) {
-    string filename = "../data_csv_files/" + table + "_csv_files/embedding.csv";
+    string filename = "data_csv_files/" + table + "_csv_files/embedding.csv";
     ifstream file(filename);
     string line;
 
