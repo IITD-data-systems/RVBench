@@ -1,5 +1,5 @@
 #  You need to put the actual path to faiss in the running system for the below compile command to work
- g++ runner.cpp -o runner -O3 -std=c++17 -I/path/to/faiss /path/to/faiss/build/faiss/libfaiss.a -lfaiss -lopenblas -lm -fopenmp
+g++ runner.cpp -o runner -O3 -std=c++17 -I/path/to/faiss /path/to/faiss/build/faiss/libfaiss.a -lfaiss -lopenblas -lm -fopenmp
 
 echo "Running ./runner with input for hnswlib l2 page..."
 ./runner hnswlib l2 page <<EOF
@@ -177,7 +177,7 @@ $(for i in {1..18}; do
 done)
 EOF
 
-echo "Running ./runner with input for hnswlib cos te..."
+echo "Running ./runner with input for hnswlib l2 pe..."
 ./runner hnswlib l2 pe <<EOF
 $(for i in {1..18}; do
     echo "1"
@@ -193,34 +193,34 @@ $(for i in {1..18}; do
 done)
 EOF
 
-echo "Running ./runner with input for faiss_ivfflat cos text..."
+echo "Running ./runner with input for faiss_ivfflat cos pe..."
 ./runner faiss_ivfflat cos pe <<EOF
 $(for i in {1..18}; do
-    echo "1 5"
-    echo "1 5"
-    echo "1 5"
-    echo "2 5"
-    echo "2 5"
-    echo "2 5"
-    echo "3 5"
-    echo "3 5"
-    echo "3 5"
+    echo "1"
+    echo "1"
+    echo "1"
+    echo "2"
+    echo "2"
+    echo "2"
+    echo "3"
+    echo "3"
+    echo "3"
     echo "done"
 done)
 EOF
 
-echo "Running ./runner with input for faiss_ivfflat cos text..."
+echo "Running ./runner with input for faiss_ivfflat l2 pe..."
 ./runner faiss_ivfflat l2 pe <<EOF
 $(for i in {1..18}; do
-    echo "1 5"
-    echo "1 5"
-    echo "1 5"
-    echo "2 5"
-    echo "2 5"
-    echo "2 5"
-    echo "3 5"
-    echo "3 5"
-    echo "3 5"
+    echo "1"
+    echo "1"
+    echo "1"
+    echo "2"
+    echo "2"
+    echo "2"
+    echo "3"
+    echo "3"
+    echo "3"
     echo "done"
 done)
 EOF
@@ -228,15 +228,15 @@ EOF
 echo "Running ./runner with input for faiss_ivfflat l2 te..."
 ./runner faiss_ivfflat l2 te <<EOF
 $(for i in {1..18}; do
-    echo "1 5"
-    echo "1 5"
-    echo "1 5"
-    echo "2 5"
-    echo "2 5"
-    echo "2 5"
-    echo "3 5"
-    echo "3 5"
-    echo "3 5"
+    echo "1"
+    echo "1"
+    echo "1"
+    echo "2"
+    echo "2"
+    echo "2"
+    echo "3"
+    echo "3"
+    echo "3"
     echo "done"
 done)
 EOF
@@ -244,15 +244,15 @@ EOF
 echo "Running ./runner with input for faiss_ivfflat cos te..."
 ./runner faiss_ivfflat cos te <<EOF
 $(for i in {1..18}; do
-    echo "1 5"
-    echo "1 5"
-    echo "1 5"
-    echo "2 5"
-    echo "2 5"
-    echo "2 5"
-    echo "3 5"
-    echo "3 5"
-    echo "3 5"
+    echo "1"
+    echo "1"
+    echo "1"
+    echo "2"
+    echo "2"
+    echo "2"
+    echo "3"
+    echo "3"
+    echo "3"
     echo "done"
 done)
 EOF
