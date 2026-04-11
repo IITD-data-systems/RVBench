@@ -75,8 +75,8 @@ void queryReaderThread(const string& queryFilename) {
 // **iKNN Thread**
 // **iKNN Thread for Rank Range Query**
 void iKNNThread(MyIndex &index) {
-    string csvFilename = "../../data_csv_files/page_csv_files/page_extra.csv";
-    string offsetFilename = "../../offsets_files/page_extra_offsets.bin";
+    string csvFilename = "../../database-generation/data_csv_files/page_csv_files/page_extra.csv";
+    string offsetFilename = "../../database-generation/offsets_files/page_extra_offsets.bin";
     ifstream csvFile(csvFilename, std::ios::binary);
     ifstream offsetFile(offsetFilename, std::ios::binary);
     while (true) {
