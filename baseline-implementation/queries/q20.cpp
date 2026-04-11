@@ -143,7 +143,10 @@ void fullPipelineNewVersion(const string& queryFilename,
             int total = 0;
             vector<int> temp_ans;
             for (auto rowId : indices) {
-
+                if(rowId==-1){
+                    done=true;
+                    break;
+                }
                 auto row = getRowByIndex(csvFile, csvOffsetFile, rowId);
                 int oldId = stoi(extractColumns(row, {0})[0]);
 
@@ -173,6 +176,7 @@ void fullPipelineNewVersion(const string& queryFilename,
             k_temp=2*k_temp;
         }
         for (int ind=l-1;ind<r;ind++){
+            if(ind>=ans.size())continue;
             outFile << ans[ind] <<"\n";
         }
 
