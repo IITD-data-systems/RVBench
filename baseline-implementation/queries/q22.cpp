@@ -82,8 +82,8 @@ void runFullPipeline(const string& queryFilename,
     ifstream revFile(revisionsFilename, ios::binary);
     ifstream revOffsetFile(revOffsetFilename, ios::binary);
     ofstream outFile(outputFilename);
-    string csvFilename = "../../database-generation/data_csv_files/page_csv_files/page_extra.csv";
-    string offsetFilename = "../../database-generation/offsets_files/page_extra_offsets.bin";
+    string csvFilenameExtra = "../../database-generation/data_csv_files/page_csv_files/page_extra.csv";
+    string offsetFilenameExtra = "../../database-generation/offsets_files/page_extra_offsets.bin";
     ifstream csvFileExtra(csvFilenameExtra, std::ios::binary);
     ifstream offsetFileExtra(offsetFilenameExtra, std::ios::binary);
 
