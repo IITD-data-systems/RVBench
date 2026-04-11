@@ -481,7 +481,7 @@ int main(int argc, char* argv[]){
         string old_id_index_filename = "../../database-generation/index_files/old_id_index.bin";
         unordered_map<int, vector<int>> old_id_index;
         load_index(old_id_index, old_id_index_filename);
-        vector<vector<float>> embeddings=loadVectorOfVectors("../database-generation/text_embeddings.bin");
+        vector<vector<float>> embeddings=loadVectorOfVectors("../../database-generation/text_embeddings.bin");
         
         cout<<"start"<<endl;
 
@@ -548,7 +548,7 @@ int main(int argc, char* argv[]){
     else{
         string page_id_index_filename = "../../database-generation/index_files/page_id_index.bin";
         string page_embedding_file =  "../../database-generation/data_csv_files/page_csv_files/embedding.csv";
-        vector<vector<float>> embeddings=loadVectorOfVectors("../database-generation/page_embeddings.bin");
+        vector<vector<float>> embeddings=loadVectorOfVectors("../../database-generation/page_embeddings.bin");
         unordered_map<int, vector<int>> page_id_index;
         load_index(page_id_index, page_id_index_filename);
 
