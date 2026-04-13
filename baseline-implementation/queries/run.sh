@@ -1,5 +1,5 @@
 #  You need to put the actual path to faiss in the running system for the below compile command to work
-g++ runner.cpp -o runner -O3 -std=c++17 -I/path/to/faiss /path/to/faiss/build/faiss/libfaiss.a -lfaiss -lopenblas -lm -fopenmp
+g++ runner.cpp -o runner -O3 -std=c++17 -I/path/to/faiss /path/to/faiss/build/faiss/libfaiss.a -lopenblas -lm -fopenmp
 
 echo "Running ./runner with input for hnswlib l2 page..."
 ./runner hnswlib l2 page <<EOF
